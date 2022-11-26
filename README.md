@@ -53,6 +53,15 @@ selenium server at `http://localhost:4444`
    ```java
    npm run test
     ```
+9. Once execution is completed you can able to generate allure report by using below command
+   ```java
+   allure generate
+   ```
+   Once report is generated successfuly open the report using below command
+   ```java
+   allure open
+   ```
+   You can able see report in default browser.
     
     
   ## Framework overview:

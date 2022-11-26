@@ -77,7 +77,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 2,
+        //maxInstances: 1,
         //
         browserName: 'chrome',
         'goog:chromeOptions': {
@@ -94,7 +94,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 2,
+        //maxInstances: 1,
         //
         browserName: 'firefox',
         'moz:firefoxOptions': {
@@ -111,7 +111,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 2,
+        //maxInstances: 2,
         //
         browserName: 'MicrosoftEdge',
         'moz:firefoxOptions': {
@@ -196,8 +196,8 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec', ['allure', {
         outputDir: 'allure-results',
-        disableWebdriverStepsReporting: false,
-        disableWebdriverScreenshotsReporting: false,
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
     }]],
 
 
