@@ -1,6 +1,6 @@
 # Webdriverio Automatio framework for ebay.com
 
- ## Local setup:
+ ## Standalone setup:
  
 
 1. Download and install nodejs(preferably version >= v18.x) based on the Operating system
