@@ -4,9 +4,13 @@
  
 
 1. Download and install nodejs(preferably version >= v18.x) based on the Operating system
-   from [NodeJs download page](https://nodejs.org/en/download/)
+   from [NodeJs download page](https://nodejs.org/en/download/).
 
-2. Download and install docker from [Docker download](https://docs.docker.com/desktop/)
+2. Download and install docker from [Docker download](https://docs.docker.com/desktop/) and Make sure 
+   the docker service is up and running by typing the below command
+    ```
+    docker -v
+    ```
 
 3. Clone the repo to the local machine
    
@@ -38,16 +42,16 @@
   
    or
   
-   npm run edge:standalon
+   npm run edge:standalone
    ```
 
-The above command will download and install selenium server jar file and necessary driver executables and starts the
-selenium server at `http://localhost:4444/wd/hub`
+The above command will download and install selenium standalone server jar file and necessary driver executables and starts the
+selenium server at `http://localhost:4444`
 
 8. Run the tests
 
    ```java
-   npm run test:local
+   npm run test
     ```
     
     
@@ -62,13 +66,17 @@ selenium server at `http://localhost:4444/wd/hub`
       
       
     
+   ## Grid Distribution setup:
       
-      
-      
-      
-      
-      
-      
-      
+  1. Start the distribution selenium server by using below command
+       
+     ```
+     npm run docker:start
+     ```
+        
+   2. Run the tests
 
+      ```java
+      npm run test
+      ```
 
