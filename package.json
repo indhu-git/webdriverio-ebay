@@ -1,0 +1,29 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "description": "",
+    "private": true,
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+        "allure": "node_modules/.bin/allure generate ./allure-results -c && allure open",
+        "test:local": "wdio run wdio.conf.js",
+        "test:docker": "npm run docker:zalenium:start && docker-compose up e2e",
+        "docker:stop": "docker-compose down",
+        "docker:e2e:build": "docker build -t volvo-e2e",
+        "docker:zalenium:start": "docker-compose up -d zalenium",
+        "webdriver:update" : "webdriver-manager update",
+        "webdriver:start": "webdriver-manager start"
+    },
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.26.0",
+        "@wdio/cli": "^7.27.0",
+        "@wdio/local-runner": "^7.27.0",
+        "@wdio/mocha-framework": "^7.26.0",
+        "@wdio/spec-reporter": "^7.26.0",
+        "chromedriver": "^107.0.3",
+        "wdio-chromedriver-service": "^8.0.0",
+        "wdio-docker-service": "^3.2.1"
+    }
+}
