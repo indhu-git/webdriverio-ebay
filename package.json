@@ -8,13 +8,14 @@
     "license": "ISC",
     "scripts": {
         "allure": "node_modules/.bin/allure generate ./allure-results -c && allure open",
-        "test:local": "wdio run wdio.conf.js",
-        "test:docker": "npm run docker:zalenium:start && docker-compose up e2e",
+        "test": "wdio run wdio.conf.js",
+        "docker:start": "docker-compose -f ./selenium-grid.yml up",
         "docker:stop": "docker-compose down",
         "docker:e2e:build": "docker build -t volvo-e2e",
         "docker:zalenium:start": "docker-compose up -d zalenium",
-        "webdriver:update" : "webdriver-manager update",
-        "webdriver:start": "webdriver-manager start"
+        "chrome:standalone" : "docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-chrome:dev",
+        "firefox:standalone" : "$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-firefox:dev",
+        "edge:standalone" : "$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-edge:dev"
     },
     "devDependencies": {
         "@wdio/allure-reporter": "^7.26.0",
